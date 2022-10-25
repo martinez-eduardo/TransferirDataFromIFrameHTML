@@ -1,0 +1,13 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+			var eventer = window[eventMethod];
+			var messageEvent = eventMethod === "attachEvent" ? "onmessage" : "message";
+			eventer(messageEvent, function (e) { alert(e.data);});
+		</script>
+	</head>
+	<body>
+		<iframe src="iframe.html" width="300" height="300"></iframe>
+	</body>
+</html>
