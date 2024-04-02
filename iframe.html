@@ -1,12 +1,12 @@
 <html>
 	<head>
 		<script type="text/javascript">
-			document.querySelector('button').onclick = function () { 
-				parent.postMessage("Argumento remoto", "*") 
-			};
+			function myFunction() { 
+				parent.postMessage("Argumento remoto", "*");
+			}
 		</script>
 	</head>
 	<body>
-		<button>Boton</button>
+		<button onclick="myFunction()">Boton</button>
 	</body>
 </html>
